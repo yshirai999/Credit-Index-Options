@@ -1,5 +1,6 @@
-%% Spread
-% Spread at time 0 of forward-start CDX swap
+%% Annuity
+% This function computes the annuity value ofthe index CDX swap at time t
+
 function [A] = Annuity(t,T0,r,lambda,T,U,...
     theta_r,theta_l,rho,c_r,c_l,g_r,g_l,N,L)
 
