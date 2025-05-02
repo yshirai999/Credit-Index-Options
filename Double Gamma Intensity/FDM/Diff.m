@@ -1,0 +1,6 @@
+function [D] = Diff(T0,r0,x,T,delta,U,...
+    theta_r,theta_l,rho,c_r,c_l,c_t,g_r,g_l,g_t,kappa)
+D = CDXSpread(0,T0,r0,x,T,delta,U,...
+    theta_r,theta_l,rho,c_r,c_l,c_t,g_r,g_l,g_t,0,0)-kappa;
+end
+

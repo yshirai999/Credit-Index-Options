@@ -1,0 +1,83 @@
+<CurveResult curveId="Index:901034548:shaped" shortName="ig34v1">
+  <Curve classType="Index">
+    <CurveIdentity id="1600061193" shortName="ig34v1" longName="ig34v1.usdlibor.ig34v1" owner="weisberg" isLive="true" stsCCId="1600061193" stsCDCId="1600061193" isPrimary="false" frameKey="Index:901034548:shaped"/>
+    <CurveVersion timeIns="2020-07-15T19:04:34.0Z" timeUpd="2020-07-15T19:04:34.0Z" lastModUser="joshisha" version="0"/>
+    <ReferenceEntity>
+      <FID1 id="901034548" shortName="ig34v1" longName="CDX.NA.IG.34" indexFamily="CDX NA IG" countryCode="USA"/>
+      <STS id="53829" longName="CDX.NA.IG.34"/>
+      <RED pairId="2I65BYDW2"/>
+    </ReferenceEntity>
+    <CurveProperties>
+      <ProductType value="Index"/>
+      <Currency value="USD"/>
+      <Recovery value="0.4"/>
+      <Seniority value="SeniorUnsec"/>
+      <ContractTerms restructuringType="None14" specialTerms="CDS"/>
+      <PaymentType value="Arrears"/>
+      <PayFrequency value="Quarterly"/>
+      <RollFrequency value="IndexStyle"/>
+      <DayCountBasis value="Act360"/>
+      <MarketCenterList>
+        <MarketCenter value="LNB"/>
+        <MarketCenter value="NYB"/>
+      </MarketCenterList>
+      <IsDefaulted value="false"/>
+      <isDLIEnabled value="false"/>
+      <IsTradingOnPrice value="false"/>
+      <IsMarkedToIntrinsics value="false"/>
+      <IndexMaturityDate value="9999-12-31"/>
+    </CurveProperties>
+    <CalculationParameters>
+      <DiscountCurve discountCurvePioneerKey="Index+IR+USD-LIBOR-BBA.3M" discountCurveSTSName="usdlibor"/>
+      <CalculationTime asOf="2020-07-16T23:11:29.0Z"/>
+    </CalculationParameters>
+    <TermList>
+      <Term maturityCategory="fixed" maturityDate="2021-06-20">
+        <Spread mid="0.00487594" bid="0.00487594" ask="0.00487594" boSpread="0"/>
+      </Term>
+      <Term maturityCategory="fixed" maturityDate="2022-06-20">
+        <Spread mid="0.0052824" bid="0.0052824" ask="0.0052824" boSpread="0"/>
+      </Term>
+      <Term maturityCategory="fixed" maturityDate="2023-06-20">
+        <Spread mid="0.00591222" bid="0.00591222" ask="0.00591222" boSpread="0"/>
+      </Term>
+      <Term maturityCategory="fixed" maturityDate="2025-06-20">
+        <Spread mid="0.00721851" bid="0.00721851" ask="0.00721851" boSpread="0"/>
+      </Term>
+      <Term maturityCategory="fixed" maturityDate="2027-06-20">
+        <Spread mid="0.00886053" bid="0.00886053" ask="0.00886053" boSpread="0"/>
+      </Term>
+      <Term maturityCategory="fixed" maturityDate="2030-06-20">
+        <Spread mid="0.01081587" bid="0.01081587" ask="0.01081587" boSpread="0"/>
+      </Term>
+    </TermList>
+  </Curve>
+  <LoadInfo>
+    <EODDate>2020-07-15</EODDate>
+    <LoadAsOf>2020-07-15 23:00:00</LoadAsOf>
+    <Source>Mixed</Source>
+  </LoadInfo>
+  <Calculation calc="HazardRates">
+    <Term years="0" months="11" days="5" code="11m5d">
+      <TermValue value="0.008245439287444992" startDate="2020-07-15" endDate="2021-06-20"/>
+    </Term>
+    <Term years="1" months="11" days="5" code="1y11m5d">
+      <TermValue value="0.009580455992132286" startDate="2021-06-20" endDate="2022-06-20"/>
+    </Term>
+    <Term years="2" months="11" days="5" code="2y11m5d">
+      <TermValue value="0.012093166223539294" startDate="2022-06-20" endDate="2023-06-20"/>
+    </Term>
+    <Term years="4" months="11" days="5" code="4y11m5d">
+      <TermValue value="0.015570124684891358" startDate="2023-06-20" endDate="2025-06-20"/>
+    </Term>
+    <Term years="6" months="11" days="5" code="6y11m5d">
+      <TermValue value="0.02236025222158358" startDate="2025-06-20" endDate="2027-06-20"/>
+    </Term>
+    <Term years="9" months="11" days="5" code="9y11m5d">
+      <TermValue value="0.027062169421982973" startDate="2027-06-20" endDate="2030-06-20"/>
+    </Term>
+  </Calculation>
+  <IsForwardHazardRate>true</IsForwardHazardRate>
+  <HazardRateDayCountAdjustment>365.25</HazardRateDayCountAdjustment>
+</CurveResult>
+
