@@ -1,4 +1,4 @@
-# A Levy driven OU process to evaluate credit index options
+# A double gamma driven OU process to evaluate credit index options
 
 ## Summary
 
@@ -72,4 +72,3 @@ Below is a summary of the main figures in the plots folder
 - Kurt1, Skew1 and Vol1L: depict time series of kurtosis, skewness and volatility of the spread as implied by the model and as extracted from options data
   - For options data extraction, the Carr-Madan formula was used
   - These moments are computed under the risk neutral probability that uses as numeraire the option annuity
-  
