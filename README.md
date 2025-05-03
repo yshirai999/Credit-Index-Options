@@ -1,16 +1,16 @@
 # A Levy driven OU process to evaluate credit index options
 
-# Summary 
+## Summary
 
 - The goal is to build a model to price options on credit indexes
 
 - The intensity process is assumed common for each name in the index, and its dynamics is given by an OU process driven by a double gamma process (i.e. a gamma time changed gamma process)
 
-- The threshold that determines default for each underlying name is an exponential random variable, with the collection of all such variate (one for each name) being independent 
+- The threshold that determines default for each underlying name is an exponential random variable, with the collection of all such variate (one for each name) being independent
 
 - The dynamics of the risk free rate (here taken to be the Treasury yield) is given by an OU process driven by a gamma process
 
-- For detail description, see the accompanying paper at: https://arxiv.org/abs/2301.05332
+- For detail description, see the accompanying paper at: [https://arxiv.org/abs/2301.05332](https://arxiv.org/abs/2301.05332)
   
 ## Data folder
 
@@ -18,7 +18,7 @@
 
 - A small sample of this dataset and its structure is provided in the Data folder
 
-- Data on Treasuries was downloaded from https://Treasury.gov
+- Data on Treasuries was downloaded from [Treasury.gov](https://Treasury.gov)
 
 ## Double Gamma Intensity
 
@@ -29,7 +29,7 @@ Below is a summary of the main MATLAB files and scripts in this folder
     - Calibration to option market data, achieved as follows:
       - The function CDXOMCCalibrationRecPay.m, takes as input option market data (as 'Data') and initial parameters and outputs the MSE of model prices to market prices
         - Model options prices are computed via MC simulation of risk free rate and default intensity processes at the option maturity (or the start of the underlying CDX contract)
-        - The price of the contract at option maturity is computed analytically by the function CDXPIDE based on the formula at the bottom of page 18 of the accompanying paper at: https://arxiv.org/abs/2301.05332
+        - The price of the contract at option maturity is computed analytically by the function CDXPIDE based on the formula at the bottom of page 18 of the accompanying paper at: [https://arxiv.org/abs/2301.05332](https://arxiv.org/abs/2301.05332)
           - This function incluldes the front end protection, which is computed by the EFEP.m function
       - The current value of the intensity process is not directly observable, but can be retrieved by equating to zero the value of the forward contract at the strike for which put-call parity hold
         - This is done in line 65 of the CDXOMCCalibrationRecPay.m
@@ -40,13 +40,13 @@ Below is a summary of the main MATLAB files and scripts in this folder
         - The relationship between these two is given by the relation (6.5) in the accompanying paper
         - The annuity is a a measure of the number of underlying issuers for which a credit event has not occurred yet
         - It can also be seen as an hypothetical bond issued at par by the average firm in the index pool
-        - Therefore, the annuity is in typically estimated by the fixed income team (see e.g. Table 5.1 of inputs provided by JPM for https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1467-9965.2010.00444.x)
+        - Therefore, the annuity is in typically estimated by the fixed income team (see e.g. Table 5.1 of inputs provided by JPM for <https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1467-9965.2010.00444.x>)
         - In our case this annuity was not provided together with the data, so we approximated the forward spread with the spot spread, and then computed the annuity using the above mentioned formula (6.5)
       - For the model implied statistics, one can assess the goodness of our approximation since we have a model for the annuity measure and so (:
         - The annuity can be computed, which is done in the Annuity.m function
-        - The spot spread can also be computed according to formula (3.3) in the paper https://arxiv.org/abs/2301.05332, and this calculations is performed in the CDXspread.m function
+        - The spot spread can also be computed according to formula (3.3) in the accompanying paper, and this calculations is performed in the CDXspread.m function
         - This check is performed in lines 374-398 of the CalibrationRecPay.m script
-       
+
   - Density folder:
     - MultiIntGammaFFT.m is the most important script in this folder
     - It computes the density of the vector $(r,\lambda)$ using Fourier inversion and the formula (4.12) in the accompanying paper for the characteristic exponent of the vector $(r,\lambda)$ and its integrated process

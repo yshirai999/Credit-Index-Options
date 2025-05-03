@@ -222,8 +222,8 @@ for m=1:6
     x0_l = [theta_l_guess(m),rho_guess(m),c_l_guess(m),g_l_guess(m),...
         c_t_guess(m),g_t_guess(m)];
     options = optimset('MaxFunEval',5000,'MaxIter',5000,'Display','off');
-    %[x1_l,fminres_l] = fminsearch(fun_l,x0_l,options);
-    x1_l = x0_l;
+    [x1_l,fminres_l] = fminsearch(fun_l,x0_l,options);
+    %x1_l = x0_l;
     
     % Default Intensity Model Results of Calibration
     
