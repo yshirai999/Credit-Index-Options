@@ -11,6 +11,16 @@
 - The dynamics of the risk free rate (here taken to be the Treasury yield) is given by an OU process driven by a gamma process
 
 - For detail description, see the accompanying paper at: [https://arxiv.org/abs/2301.05332](https://arxiv.org/abs/2301.05332)
+
+## About the Author
+
+**Yoshihiro Shirai** is a Pearson Fellow at the University of Washington with expertise in applied mathematics, quantitative modeling, and macro strategy research.
+
+- 🔗 [LinkedIn](https://www.linkedin.com/in/yoshihiro-shirai/)
+- 📖 [Google Scholar](https://scholar.google.com/citations?user=...)
+- 💻 [GitHub](https://github.com/yshirai999)
+- 🌐 [Personal Website](https://www.yoshihiroshirai.com)
+
   
 ## Data folder
 
